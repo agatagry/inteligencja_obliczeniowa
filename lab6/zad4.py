@@ -34,7 +34,7 @@ model.add(Dense(3, activation='relu'))
 model.add(Dense(1, activation='sigmoid'))
 
 # Skompiluj model
-model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+model.compile(loss='binary_crossentropy', optimizer='RMSprop', metrics=['accuracy'])
 
 # Wytrenuj model na zbiorze treningowym, zapisując historię
 history = model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=500, batch_size=10, verbose=0)
